@@ -5,7 +5,7 @@ global:
       superuser:
         username: "admin"
         email: "admin@admin.local"
-      media_dir: "/data/media"
+      media_dir: "/app/media"
     ingress:
       enabled: true
       host: papermerge.ganon.local
