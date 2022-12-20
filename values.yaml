@@ -18,3 +18,10 @@ global:
       name: "postgres"
     es:
       enabled: false
+  secrets:
+    db:
+      password: ''
+    app:
+      secret_key: ''
+      superuser:
+        password: ''
