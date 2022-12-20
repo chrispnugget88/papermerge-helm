@@ -8,7 +8,9 @@ global:
       superuser:
         username: "admin"
         email: "admin@example.com"
-      media_dir: "/data/media"
+      media_dir: "/app/media"
+      logging_config: ''
+      tz: GMT
     ingress:
       enabled: true
       host: papermerge.minikube

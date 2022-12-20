@@ -11,7 +11,12 @@ data:
   PAPERMERGE__DATABASE__NAME: {{ .Values.global.conf.db.name | quote }}
   PAPERMERGE__DATABASE__HOST: {{ .Values.global.conf.db.host | quote }}
   PAPERMERGE__REDIS__HOST: {{ .Values.global.conf.redis.host | quote }}
+  PAPERMERGE__MAIN__MEDIA_ROOT: {{ .Values.global.conf.app.media_dir | quote }}
+  PAPERMERGE__MAIN__TIMEZONE: {{ .Values.global.conf.app.tz | quote }}
 {{- if .Values.global.conf.es.enabled }}
   PAPERMERGE_ELASTICSEARCH_HOSTS: {{ .Values.global.conf.es.hosts | quote }}
   PAPERMERGE_ELASTICSEARCH_PORT: {{ .Values.global.conf.es.port | quote }}
-{{- end}}
+{{- end }}
+{{- if .Values.global.conf.app.logging_config }}
+  PAPERMERGE__MAIN__LOGGING_CFG: {{ .Values.global.conf.app.logging_config | quote }}
+{{- end }}
