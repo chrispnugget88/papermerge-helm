@@ -30,7 +30,7 @@ spec:
       initContainers:
         - name: {{ include "worker.fullname" . }}-init
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          command: ["/run.bash", "worker_init"]
+          command: ["/run.bash", "migrate"]
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           envFrom:
             - configMapRef:
