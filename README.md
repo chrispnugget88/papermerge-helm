@@ -9,20 +9,32 @@ In order to install papermerge use following command:
 
     helm install papermerge . -f .values.yaml
 
-Example of .values.yaml:
+## Parameters
 
-    global:
-      conf:
-        ingress:
-          host: papermerge.minikube
-        db:
-          host: "pg-postgresql"
-        redis:
-          host: "redis-master"
-      secrets:
-        db:
-          password: "<hidden>"
-        app:
-          secret_key: "<hidden>"
-          superuser:
-            password: "<hidden>"
+### Worker parameters
+
+| Name                  | Description                     | Value |
+| --------------------- | ------------------------------- | ----- |
+| `worker.replicaCount` | Amount of worker pods to create | `3`   |
+
+
+### Global parameters
+
+| Name                                     | Description                          | Value                 |
+| ---------------------------------------- | ------------------------------------ | --------------------- |
+| `global.conf.app.django_settings_module` |                                      | `config.settings`     |
+| `global.conf.app.superuser.username`     | Django SuperUser username            | `admin`               |
+| `global.conf.app.superuser.email`        | Django SuperUser email               | `admin@example.com`   |
+| `global.conf.app.media_dir`              | Default location for all media files | `/app/media`          |
+| `global.conf.app.logging_config`         |                                      | `""`                  |
+| `global.conf.app.tz`                     |                                      | `GMT`                 |
+| `global.conf.ingress.enabled`            | Enables the ingress module           | `true`                |
+| `global.conf.ingress.host`               | Host name of ingress thing           | `papermerge.minikube` |
+| `global.conf.db.type`                    | Database engine type                 | `postgres`            |
+| `global.conf.db.user`                    | Database login user                  | `postgres`            |
+| `global.conf.db.name`                    | Database name                        | `postgres`            |
+| `global.conf.es.enabled`                 |                                      | `false`               |
+| `global.secrets.db.password`             |                                      | `""`                  |
+| `global.secrets.app.secret_key`          |                                      | `""`                  |
+| `global.secrets.app.superuser.password`  |                                      | `""`                  |
+
