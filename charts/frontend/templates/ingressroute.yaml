@@ -6,8 +6,8 @@ metadata:
 spec:
   routes:
   - kind: Rule
-    match: Host(`{{ .Values.global.conf.ingress.host }}`)
+    match: Host(`{{ .Values.global.conf.ingress.host }}`) && PathPrefix(`/`)
     services:
     - name: {{ include "frontend.fullname" . }}
       port: {{ .Values.service.port }}
-{{- end}}
+{{- end }}
