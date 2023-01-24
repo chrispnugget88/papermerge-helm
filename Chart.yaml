@@ -11,18 +11,14 @@ description: Papermerge helm chart for Kubernetes
 # a dependency of application charts to inject those utilities and functions into the rendering
 # pipeline. Library charts do not define any templates and therefore cannot be deployed.
 type: application
-
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.4.1
+version: 0.4.2
 appVersion: "2.1.4"
-
-
 maintainers:
   - name: Jason
     email: "jason@gh4.io"
-
 dependencies:
   - alias: PapermergeBackendAPI
     name: backend
@@ -36,5 +32,5 @@ dependencies:
   - alias: PapermergeWebsocketServer
     name: wsserver
     version: "2.1.4"
-
 icon: https://github.com/ciur/papermerge/blob/79f1d152701f984957f9dee58e8196fc3924871c/artwork/logo-transp-bg.svg
+home: https://github.com/chrispnugget88/papermerge-helm/tree/9c024697a69d96b612821bb77f5db67376d50928
