@@ -47,6 +47,9 @@ global:
     es:
       ## @param global.conf.es.enabled
       enabled: false
+    redis:
+      ## @param global.conf.redis.host Host name of redis service
+      host: "redis"
   secrets:
     db:
       ## @param global.secrets.db.password

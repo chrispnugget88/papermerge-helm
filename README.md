@@ -34,6 +34,7 @@ In order to install papermerge use following command:
 | `global.conf.db.user`                    | Database login user                  | `postgres`            |
 | `global.conf.db.name`                    | Database name                        | `postgres`            |
 | `global.conf.es.enabled`                 |                                      | `false`               |
+| `global.conf.redis.host`                 | Host name of redis service           | `redis`               |
 | `global.secrets.db.password`             |                                      | `""`                  |
 | `global.secrets.app.secret_key`          |                                      | `""`                  |
 | `global.secrets.app.superuser.password`  |                                      | `""`                  |

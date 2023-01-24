@@ -15,10 +15,26 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.4.0
+version: 0.4.1
 appVersion: "2.1.4"
 
 
 maintainers:
-  - name: Eugen Ciur
-    email: "eugen@papermerge.com"
+  - name: Jason
+    email: "jason@gh4.io"
+
+dependencies:
+  - alias: PapermergeBackendAPI
+    name: backend
+    version: "2.1.4"
+  - alias: PapermergeFrontend
+    name: frontend
+    version: "2.1.2"
+  - alias: PapermergeWorker
+    name: worker
+    version: "2.1.4"
+  - alias: PapermergeWebsocketServer
+    name: wsserver
+    version: "2.1.4"
+
+icon: https://github.com/ciur/papermerge/blob/79f1d152701f984957f9dee58e8196fc3924871c/artwork/logo-transp-bg.svg
