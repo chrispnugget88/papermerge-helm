@@ -14,7 +14,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.4.2
+version: 0.4.3
 appVersion: "2.1.4"
 maintainers:
   - name: Jason
@@ -34,3 +34,5 @@ dependencies:
     version: "2.1.4"
 icon: https://github.com/ciur/papermerge/blob/79f1d152701f984957f9dee58e8196fc3924871c/artwork/logo-transp-bg.svg
 home: https://github.com/chrispnugget88/papermerge-helm/tree/9c024697a69d96b612821bb77f5db67376d50928
+sources:
+- https://github.com/chrispnugget88/papermerge-helm
