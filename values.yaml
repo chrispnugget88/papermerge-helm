@@ -1,29 +1,62 @@
-worker:
-  replicaCount: 1
 
+## @section Worker parameters
+## Worker parameters
+worker:
+  ## @param worker.replicaCount Amount of worker pods to create
+  replicaCount: 3
+
+## @section Global parameters
+## Global parameters
 global:
   conf:
     app:
+      ## @param global.conf.app.django_settings_module
+      ##
       django_settings_module: config.settings
       superuser:
+        ## @param global.conf.app.superuser.username Django SuperUser username
+        ##
         username: "admin"
+        ## @param global.conf.app.superuser.email Django SuperUser email
+        ##
         email: "admin@example.com"
+      ## @param global.conf.app.media_dir Default location for all media files
+      ##
       media_dir: "/app/media"
+      ## @param global.conf.app.logging_config
+      ##
       logging_config: ''
+      ## @param global.conf.app.tz
+      ##
       tz: GMT
     ingress:
+      ## @param global.conf.ingress.enabled Enables the ingress module
+      ##
       enabled: true
+      ## @param global.conf.ingress.host Host name of ingress thing
+      ##
       host: papermerge.minikube
     db:
+      ## @param global.conf.db.type Database engine type
       type: "postgres"
+      ## @param global.conf.db.user Database login user
+      ##
       user: "postgres"
+      ## @param global.conf.db.name Database name
       name: "postgres"
     es:
+      ## @param global.conf.es.enabled
       enabled: false
   secrets:
     db:
+      ## @param global.secrets.db.password
+      ##
       password: ''
     app:
+      ## @param global.secrets.app.secret_key
+      ##
       secret_key: ''
       superuser:
+        ## @param global.secrets.app.superuser.password
+        ##
         password: ''
