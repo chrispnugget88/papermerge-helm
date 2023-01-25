@@ -1,8 +1,8 @@
-FROM ubuntu
+FROM alpine
 
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install git -y
+RUN apk update && \
+    apk upgrade && \
+    apk add git
 
 ADD entrypoint.sh /entrypoint.sh
 
