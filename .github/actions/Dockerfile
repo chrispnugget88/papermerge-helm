@@ -1,8 +1,8 @@
 FROM ubuntu
 
-RUN apk update && \
-    apk upgrade && \
-    apk add git
+RUN apt update && \
+    apt upgrade && \
+    apt install -y git
 
 ADD entrypoint.sh /entrypoint.sh
 
