@@ -24,7 +24,7 @@ echo "Cleaning source folder"
 
 echo "Removing the folling files... $INPUT_CLEAN_FILES"
 
-IFS=',() ' read -r -a arr <<< $INPUT_CLEAN_FILES
+IFS=',' read -r -a arr <<< $INPUT_CLEAN_FILES
 
 
 for files in "${arr[@]}"; do
