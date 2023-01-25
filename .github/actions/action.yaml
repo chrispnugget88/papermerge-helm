@@ -25,6 +25,9 @@ inputs:
   destination_branch_create:
     description: 'Destination branch to create for this commit'
     required: false
+  clean_files:
+    description: 'Clean these files from source brfore push and commit'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -36,6 +39,7 @@ runs:
     - ${{ inputs.destination-branch }}
     - ${{ inputs.destination-branch-create }}
     - ${{ inputs.commit_msg }}
+    - ${{ inputs.clean_files }}
 branding:
   icon: 'git-commit'
   color: 'green'

@@ -20,6 +20,14 @@ then
   INPUT_COMMIT_MSG="Update $INPUT_DESTINATION_FOLDER."
 fi
 
+echo "Cleaning source folder"
+
+echo "Removing the folling files... ${INPUTS_CLEAN_FILES[@]}"
+
+for files in "${INPUTS_CLEAN_FILES[@]}"; do
+  rm -rf "$INPUT_DESTINATION_FOLDER/$files"
+done
+
 CLONE_DIR=$(mktemp -d)
 
 echo "Cloning destination git repository"
