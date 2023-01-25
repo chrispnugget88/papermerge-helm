@@ -22,7 +22,7 @@ fi
 
 echo "Cleaning source folder"
 
-echo "Removing the folling files... ${INPUT_CLEAN_FILES[@]}"
+# echo "Removing the folling files... ${INPUT_CLEAN_FILES[@]}"
 
 for files in "${INPUT_CLEAN_FILES[@]}"; do
   rm -rf "$INPUT_DESTINATION_FOLDER/$files"
