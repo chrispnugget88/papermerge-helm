@@ -18,7 +18,7 @@ jobs:
       with:
         source_folder: 'charts'
         destination_repo: 'gh4-io/charts'
-        destination_folder: '/charts/papermerge'
+        destination_folder: 'charts/papermerge'
         user_email: 'jason@gh4.io'
-        user_name: 'gh4-io'
-        commit_msg: '[GHA] Push post update'
+        user_name: 'jason@gh4.io'
+        commit_msg: 'Push post update'
