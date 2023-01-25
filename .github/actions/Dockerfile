@@ -1,8 +1,8 @@
 FROM ubuntu
 
-RUN apt update && \
-    apt upgrade && \
-    apt install -y git
+RUN apt-get update && \
+    apt-get upgrade && \
+    apt-get install git -y
 
 ADD entrypoint.sh /entrypoint.sh
 
