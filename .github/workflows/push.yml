@@ -16,7 +16,7 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_folder: '/'
+        source_folder: ''
         destination_repo: 'gh4-io/charts'
         destination_branch: 'push-test'
         destination_folder: 'charts/papermerge'
