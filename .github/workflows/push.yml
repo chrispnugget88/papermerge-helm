@@ -16,7 +16,7 @@ jobs:
       env:
         API_TOKEN_GITHUB: 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
       with:
-        source_folder: '/'
+        source_folder: 'charts'
         destination_repo: 'gh4-io/charts'
         destination_folder: '/charts/papermerge'
         user_email: 'jason@gh4.io'
