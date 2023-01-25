@@ -23,11 +23,12 @@ fi
 echo "Cleaning source folder"
 
 echo "Removing the folling files... $INPUT_CLEAN_FILES"
+echo $INPUT_CLEAN_FILES
 
-IFS=',' read -r -a arr <<< "$INPUT_CLEAN_FILES"
+IFS=',' read -r -a arr1 <<< $INPUT_CLEAN_FILES
 
 
-for files in "${arr[@]}"; do
+for files in "${arr1[@]}"; do
   rm -rf "$INPUT_DESTINATION_FOLDER/$files"
 done
 
