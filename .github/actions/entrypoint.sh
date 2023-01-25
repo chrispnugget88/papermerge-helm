@@ -20,10 +20,14 @@ then
   INPUT_COMMIT_MSG="Update $INPUT_DESTINATION_FOLDER."
 fi
 
+printf '=%.0s' {1..100}
+printf '=%.0s' {1..100}
+
 echo "Cleaning source folder"
 
-echo "Removing the following files... $INPUT_CLEAN_FILES"
-echo $INPUT_CLEAN_FILES
+echo "Removing the following files... "
+echo "$INPUT_CLEAN_FILES"
+
 
 IFS="," read -r -a arr1 <<< $INPUT_CLEAN_FILES
 
@@ -32,6 +36,10 @@ for files in "${arr1[@]}"; do
   # @discription -r=directories and content, -f=force, -v=verbose
   rm -rfv "$INPUT_SOURCE_FOLDER"/$files
 done
+
+printf '=%.0s' {1..100}
+echo "Cleaning Complete"
+printf '=%.0s' {1..100}
 
 CLONE_DIR=$(mktemp -d)
 
