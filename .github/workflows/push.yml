@@ -23,4 +23,4 @@ jobs:
         user_email: 'jason@gh4.io'
         user_name: 'gh4-io'
         commit_msg: 'Push post update'
-        clean_files: ['.git','.git*','.vscode','*.tgz','.values*']
+        clean_files: ('.git' '.git*' '.vscode' '*.tgz' '.values*')
