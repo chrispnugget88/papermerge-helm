@@ -12,13 +12,13 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Pushes source files
-      uses: datalbry/copy_folder_to_another_repo_action@1.0.0
+      uses: ./.github/actions/
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
         source_folder: 'charts'
         destination_repo: 'gh4-io/charts'
-        destination_branch: 'master'
+        destination_branch: 'push-test'
         destination_folder: 'charts/papermerge'
         user_email: 'jason@gh4.io'
         user_name: 'gh4-io'
