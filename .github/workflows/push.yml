@@ -24,3 +24,4 @@ jobs:
         user_name: 'gh4-io'
         commit_msg: 'Push post update'
         clean_files: '.git,.git*,.vscode,*.tgz,.values*'
+        debug: false

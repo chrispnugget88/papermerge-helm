@@ -28,6 +28,9 @@ inputs:
   clean_files:
     description: 'Clean these files from source brfore push and commit'
     required: false
+  debug:
+    description: 'Used to debug content'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -40,6 +43,7 @@ runs:
     - ${{ inputs.destination-branch-create }}
     - ${{ inputs.commit_msg }}
     - ${{ inputs.clean_files }}
+    - ${{ inputs.debug }}
 branding:
   icon: 'git-commit'
   color: 'green'

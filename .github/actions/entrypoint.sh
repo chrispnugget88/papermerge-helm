@@ -1,7 +1,12 @@
 #!/bin/bash
 
+
 set -e
-set -x
+
+if $INPUT_DEBUG 
+then
+  set -x
+fi
 
 if [ -z "$INPUT_SOURCE_FOLDER" ]
 then
@@ -20,8 +25,8 @@ then
   INPUT_COMMIT_MSG="Update $INPUT_DESTINATION_FOLDER."
 fi
 
-printf '=%.0s\n' {1..100}
-printf '=%.0s\n' {1..100}
+printf '=%.0s' {1..100}; printf '\n'
+printf '=%.0s' {1..100}; printf '\n'
 
 echo "Cleaning source folder"
 
@@ -37,9 +42,9 @@ for files in "${arr1[@]}"; do
   rm -rfv "$INPUT_SOURCE_FOLDER"/$files
 done
 
-printf '=%.0s\n' {1..100}
+printf '=%.0s' {1..100}; printf '\n'
 echo "Cleaning Complete"
-printf '=%.0s\n' {1..100}
+printf '=%.0s' {1..100}; printf '\n'
 
 CLONE_DIR=$(mktemp -d)
 

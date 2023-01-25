@@ -1,8 +1,7 @@
-FROM alpine
+FROM ubuntu
 
-RUN apk update && \
-    apk upgrade && \
-    apk add bash git
+RUN apt udate \
+    apt install -y git
 
 ADD entrypoint.sh /entrypoint.sh
 
