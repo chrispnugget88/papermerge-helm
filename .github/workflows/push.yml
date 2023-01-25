@@ -14,11 +14,11 @@ jobs:
     - name: Pushes source files
       uses: datalbry/copy_folder_to_another_repo_action@1.0.0
       env:
-        API_TOKEN_GITHUB: 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
+        API_TOKEN_GITHUB: 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
       with:
         source_folder: '/'
         destination_repo: 'gh4-io/charts'
-        destination_folder: 'charts/papermerge'
+        destination_folder: '/charts/papermerge'
         user_email: 'jason@gh4.io'
         user_name: 'gh4-io'
         commit_msg: '[GHA] Push post update'
