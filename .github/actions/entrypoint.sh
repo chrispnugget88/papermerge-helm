@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 set -x
@@ -30,8 +30,7 @@ echo $INPUT_CLEAN_FILES
 ## but new syntax has to be 'echo $INPUT_CLEAN_FILES'
 
 # IFS="," read -r -a arr1 < <(echo $INPUT_CLEAN_FILES)
-declare -A arr1
-IFS="," read -r arr1 <<< echo $INPUT_CLEAN_FILES
+IFS="," read -r -a arr1 <<< echo $INPUT_CLEAN_FILES
 
 
 for files in "${arr1[@]}"; do
