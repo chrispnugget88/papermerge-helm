@@ -25,7 +25,11 @@ echo "Cleaning source folder"
 echo "Removing the folling files... $INPUT_CLEAN_FILES"
 echo $INPUT_CLEAN_FILES
 
-IFS="," read -r -a arr1 <<< $INPUT_CLEAN_FILES
+
+## Original syntax is '<<< $INPUT_CLEAN_FILES'
+## but new syntax has to be 'echo $INPUT_CLEAN_FILES'
+
+IFS="," read -r -a arr1 echo $INPUT_CLEAN_FILES
 
 
 for files in "${arr1[@]}"; do
