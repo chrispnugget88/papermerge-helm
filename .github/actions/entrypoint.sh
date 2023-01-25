@@ -30,7 +30,7 @@ IFS="," read -r -a arr1 <<< $INPUT_CLEAN_FILES
 ## @discription loops through arry and removed selected files
 for files in "${arr1[@]}"; do
   # @discription -r=directories and content, -f=force, -v=verbose
-  rm -rfv "$INPUT_SOURCE_FOLDER/$files"
+  rm -rfv "$INPUT_SOURCE_FOLDER"/$files
 done
 
 CLONE_DIR=$(mktemp -d)
