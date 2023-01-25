@@ -36,6 +36,7 @@ global:
       ## @param global.conf.ingress.host Host name of ingress thing
       ##
       host: papermerge.minikube
+    
     db:
       ## @param global.conf.db.type Database engine type
       type: "postgres"
@@ -44,9 +45,15 @@ global:
       user: "postgres"
       ## @param global.conf.db.name Database name
       name: "postgres"
+      ## @param global.conf.db.host Hostname of database
+      ##
+      host: "db"
+      ## @extra global.conf.db.port Port for database
     es:
       ## @param global.conf.es.enabled
       enabled: false
+      ## @extra global.conf.es.host
+      ## @extra global.conf.es.port
     redis:
       ## @param global.conf.redis.host Host name of redis service
       host: "redis"
