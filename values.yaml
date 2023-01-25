@@ -1,4 +1,3 @@
-
 ## @section Worker parameters
 ## Worker parameters
 worker:
@@ -39,6 +38,7 @@ global:
     
     db:
       ## @param global.conf.db.type Database engine type
+      ##
       type: "postgres"
       ## @param global.conf.db.user Database login user
       ##
@@ -49,6 +49,7 @@ global:
       ##
       host: "db"
       ## @extra global.conf.db.port Port for database
+      ##
     es:
       ## @param global.conf.es.enabled
       enabled: false
@@ -56,7 +57,11 @@ global:
       ## @extra global.conf.es.port
     redis:
       ## @param global.conf.redis.host Host name of redis service
+      ##
       host: "redis"
+      ## @param global.conf.redis.port Port of redis service
+      ##
+      port: 6379
   secrets:
     db:
       ## @param global.secrets.db.password
