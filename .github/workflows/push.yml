@@ -14,7 +14,7 @@ jobs:
     - name: Pushes source files
       uses: datalbry/copy_folder_to_another_repo_action@1.0.0
       env:
-        API_TOKEN_GITHUB: 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
+        API_TOKEN_GITHUB: "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"
       with:
         source_folder: 'charts'
         destination_repo: 'gh4-io/charts'
