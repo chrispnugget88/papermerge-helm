@@ -24,9 +24,12 @@ echo "Cleaning source folder"
 
 echo "Removing the folling files... $INPUT_CLEAN_FILES"
 
-# for files in "${INPUT_CLEAN_FILES[@]}"; do
-#   rm -rf "$INPUT_DESTINATION_FOLDER/$files"
-# done
+IFS=',() ' read -r -a arr <<< $INPUT_CLEAN_FILES
+
+
+for files in "${arr[@]}"; do
+  rm -rf "$INPUT_DESTINATION_FOLDER/$files"
+done
 
 CLONE_DIR=$(mktemp -d)
 
