@@ -33,8 +33,13 @@ In order to install papermerge use following command:
 | `global.conf.db.type`                    | Database engine type                 | `postgres`            |
 | `global.conf.db.user`                    | Database login user                  | `postgres`            |
 | `global.conf.db.name`                    | Database name                        | `postgres`            |
+| `global.conf.db.host`                    | Hostname of database                 | `db`                  |
+| `global.conf.db.port`                    | Port for database                    |                       |
 | `global.conf.es.enabled`                 |                                      | `false`               |
+| `global.conf.es.host`                    |                                      |                       |
+| `global.conf.es.port`                    |                                      |                       |
 | `global.conf.redis.host`                 | Host name of redis service           | `redis`               |
+| `global.conf.redis.port`                 | Port of redis service                | `6379`                |
 | `global.secrets.db.password`             |                                      | `""`                  |
 | `global.secrets.app.secret_key`          |                                      | `""`                  |
 | `global.secrets.app.superuser.password`  |                                      | `""`                  |
