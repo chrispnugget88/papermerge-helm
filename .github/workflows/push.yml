@@ -18,6 +18,7 @@ jobs:
       with:
         source_folder: 'charts'
         destination_repo: 'gh4-io/charts'
+        destination_branch: 'master'
         destination_folder: 'charts/papermerge'
         user_email: 'jason@gh4.io'
         user_name: 'jason@gh4.io'
