@@ -20,8 +20,8 @@ then
   INPUT_COMMIT_MSG="Update $INPUT_DESTINATION_FOLDER."
 fi
 
-printf '=%.0s' {1..100}
-printf '=%.0s' {1..100}
+printf '=%.0s\n' {1..100}
+printf '=%.0s\n' {1..100}
 
 echo "Cleaning source folder"
 
@@ -37,9 +37,9 @@ for files in "${arr1[@]}"; do
   rm -rfv "$INPUT_SOURCE_FOLDER"/$files
 done
 
-printf '=%.0s' {1..100}
+printf '=%.0s\n' {1..100}
 echo "Cleaning Complete"
-printf '=%.0s' {1..100}
+printf '=%.0s\n' {1..100}
 
 CLONE_DIR=$(mktemp -d)
 
