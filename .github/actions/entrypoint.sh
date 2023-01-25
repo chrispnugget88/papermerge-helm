@@ -22,7 +22,7 @@ fi
 
 echo "Cleaning source folder"
 
-echo "Removing the folling files... $INPUT_CLEAN_FILES"
+echo "Removing the following files... $INPUT_CLEAN_FILES"
 echo $INPUT_CLEAN_FILES
 
 IFS="," read -r -a arr1 <<< $INPUT_CLEAN_FILES
