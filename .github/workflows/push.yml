@@ -2,7 +2,11 @@
 
 name: Push File
 
-on: push
+on:
+  push:
+    branches:
+      - 'main'
+      - 'master'
 
 jobs:
   copy-file:
@@ -12,7 +16,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Pushes source files
-      uses: ./.github/actions/
+      uses: gh4-io/copy-helm@v0.0.1
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
