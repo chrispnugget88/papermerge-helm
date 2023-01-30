@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: gh4-io/checkout@main
+        uses: gh4-io/checkout@v1.5
         with:
           fetch-depth: 0
 
