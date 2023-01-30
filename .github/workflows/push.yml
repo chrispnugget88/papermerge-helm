@@ -20,11 +20,11 @@ jobs:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
         source_folder: './'
-        destination_repo: 'gh4-io/charts'
+        destination_repo: '$GITHUB_ACTOR/charts'
         destination_branch: 'master'
         destination_folder: 'charts/papermerge'
-        user_email: 'jason@gh4.io'
-        user_name: '$GITHUB_ACTOR@users.noreply.github.com'
+        user_email: '$GITHUB_ACTOR@users.noreply.github.com'
+        user_name: '$GITHUB_ACTOR'
         commit_msg: 'Push post update'
         clean_files: '.git,.git*,.vscode,*.tgz,.values*'
         debug: false
@@ -47,4 +47,4 @@ jobs:
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         with:
-          charts_dir: '.'
+          charts_dir: './'
