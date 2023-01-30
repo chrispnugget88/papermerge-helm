@@ -5,8 +5,7 @@ name: Push File
 on:
   push:
     branches:
-      - 'main'
-      - 'master'
+      - 'test'
 
 jobs:
   copy-file:
@@ -25,7 +24,24 @@ jobs:
         destination_branch: 'master'
         destination_folder: 'charts/papermerge'
         user_email: 'jason@gh4.io'
-        user_name: 'gh4-io'
+        user_name: '$GITHUB_ACTOR@users.noreply.github.com'
         commit_msg: 'Push post update'
         clean_files: '.git,.git*,.vscode,*.tgz,.values*'
         debug: false
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@v1.1.0
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
