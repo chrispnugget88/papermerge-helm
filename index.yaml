@@ -22,6 +22,38 @@ entries:
     urls:
     - https://github.com/gh4-io/papermerge-helm/releases/download/frontend-0.4.0/frontend-0.4.0.tgz
     version: 0.4.0
+  papermerge:
+  - apiVersion: v2
+    appVersion: 2.1.4
+    created: "2023-01-31T16:20:04.439408363Z"
+    dependencies:
+    - name: backend
+      repository: ""
+      version: 0.4.0
+    - name: frontend
+      repository: ""
+      version: 0.4.0
+    - name: worker
+      repository: ""
+      version: 0.4.0
+    - alias: ws_server
+      name: wsserver
+      repository: ""
+      version: 0.4.0
+    description: Papermerge helm chart for Kubernetes
+    digest: 079d8654a1328b4d0c34cf2b305992235157fb2d6f148dc5aaee316c14b93f38
+    home: https://github.com/chrispnugget88/papermerge-helm
+    icon: https://github.com/ciur/papermerge/raw/master/artwork/logo.png
+    maintainers:
+    - email: jason@gh4.io
+      name: Jason
+    name: papermerge
+    sources:
+    - https://github.com/chrispnugget88/papermerge-helm
+    type: application
+    urls:
+    - https://github.com/gh4-io/papermerge-helm/releases/download/papermerge-0.4.4/papermerge-0.4.4.tgz
+    version: 0.4.4
   worker:
   - apiVersion: v2
     appVersion: 2.1.4
@@ -44,4 +76,4 @@ entries:
     urls:
     - https://github.com/gh4-io/papermerge-helm/releases/download/wsserver-0.4.0/wsserver-0.4.0.tgz
     version: 0.4.0
-generated: "2023-01-30T19:03:56.515411998Z"
+generated: "2023-01-31T16:20:04.439414363Z"
