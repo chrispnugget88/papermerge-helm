@@ -8,18 +8,15 @@ maintainers:
   - name: Jason
     email: "jason@gh4.io"
 dependencies:
-  - alias: PapermergeBackendAPI
-    name: backend
-    version: "2.1.4"
-  - alias: PapermergeFrontend
-    name: frontend
-    version: "2.1.2"
-  - alias: PapermergeWorker
-    name: worker
-    version: "2.1.4"
-  - alias: PapermergeWebsocketServer
-    name: wsserver
-    version: "2.1.4"
+  - name: backend
+    version: "0.4.0"
+  - name: frontend
+    version: "0.4.0"
+  - name: worker
+    version: "0.4.0"
+  - name: wsserver
+    version: "0.4.0"
+    alias: ws_server
 icon: https://github.com/ciur/papermerge/raw/master/artwork/logo.png
 home: https://github.com/chrispnugget88/papermerge-helm
 sources:
