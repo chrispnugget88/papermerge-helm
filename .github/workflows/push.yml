@@ -49,4 +49,4 @@ jobs:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         with:
           charts_dir: './'
-          root_chart: true
+          root_chart: "true"
