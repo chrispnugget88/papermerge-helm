@@ -7,7 +7,10 @@ This is helm chart for Papermerge deployment in Kubernetes cluster.
 
 In order to install papermerge use following command:
 
-    helm install papermerge . -f .values.yaml
+```bash
+helm repo add gh4-io https://gh4-io.github.io/charts
+helm install papermerge gh4-io/papermerge
+```
 
 ## Parameters
 

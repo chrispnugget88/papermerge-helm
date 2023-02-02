@@ -44,7 +44,7 @@ jobs:
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
       - name: Run chart-releaser
-        uses: gh4-io/chart-releaser-action@main
+        uses: gh4-io/chart-releaser-action@echoCharts
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         with:
