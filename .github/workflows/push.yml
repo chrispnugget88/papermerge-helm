@@ -19,19 +19,19 @@ jobs:
   copy-file:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-    - name: Pushes source files
-      uses: gh4-io/copy-helm@main
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-      with:
-        source_folder: '.'
-        destination_repo: 'gh4-io/charts'
-        destination_branch: 'master'
-        destination_folder: 'charts/papermerge'
-        user_email: 'jason@gh4.io'
-        user_name: 'gh4-io'
-        commit_msg: 'Push post update'
-        debug: 'true'
+      - name: Pushes source files
+        uses: gh4-io/copy-helm@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source_folder: '.'
+          destination_repo: 'gh4-io/charts'
+          destination_branch: 'master'
+          destination_folder: 'charts/papermerge'
+          user_email: 'jason@gh4.io'
+          user_name: 'gh4-io'
+          commit_msg: 'Push post update'
+          debug: 'true'
