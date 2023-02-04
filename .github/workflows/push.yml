@@ -27,12 +27,11 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_folder: './'
+        source_folder: '.'
         destination_repo: 'gh4-io/charts'
         destination_branch: 'master'
         destination_folder: 'charts/papermerge'
         user_email: 'jason@gh4.io'
         user_name: 'gh4-io'
         commit_msg: 'Push post update'
-        clean_files: '.git,.git*,.vscode,*.tgz,.values*'
         debug: false
