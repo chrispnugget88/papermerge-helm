@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Pushes source files
       uses: gh4-io/copy-helm@main
@@ -34,4 +34,4 @@ jobs:
         user_email: 'jason@gh4.io'
         user_name: 'gh4-io'
         commit_msg: 'Push post update'
-        debug: false
+        debug: 'true'
